@@ -22,7 +22,7 @@ const ButtonHandler = (props: Props) => {
       <div className="w-full flex flex-col gap-3 items-center">
         <Button
           type="submit"
-          className="w-full"
+          className="w-full bg-[#009A6E] text-white hover:bg-[#007f5f]"
         >
           Create an account
         </Button>
@@ -30,7 +30,7 @@ const ButtonHandler = (props: Props) => {
           Already have an account?
           <Link
             href="/auth/sign-in"
-            className="font-bold"
+            className="font-bold bg-[#009A6E] text-white hover:bg-[#007f5f]"
           >
             Sign In
           </Link>
@@ -44,7 +44,7 @@ const ButtonHandler = (props: Props) => {
       <div className="w-full flex flex-col gap-3 items-center">
         <Button
           type="submit"
-          className="w-full"
+          className="w-full bg-[#009A6E] text-white hover:bg-[#007f5f]"
           {...(isName &&
             isEmail &&
             isPassword && {
@@ -62,7 +62,7 @@ const ButtonHandler = (props: Props) => {
           Already have an account?{' '}
           <Link
             href="/auth/sign-in"
-            className="font-bold"
+            className="font-bold hover:underline"
           >
             Sign In
           </Link>
@@ -75,7 +75,7 @@ const ButtonHandler = (props: Props) => {
     <div className="w-full flex flex-col gap-3 items-center">
       <Button
         type="submit"
-        className="w-full"
+        className="w-full bg-[#009A6E] text-white hover:bg-[#007f5f]"
         onClick={() => setCurrentStep((prev: number) => prev + 1)}
       >
         Continue
@@ -84,7 +84,7 @@ const ButtonHandler = (props: Props) => {
         Already have an account?{' '}
         <Link
           href="/auth/sign-in"
-          className="font-bold"
+          className="font-bold hover:underline"
         >
           Sign In
         </Link>

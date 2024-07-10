@@ -15,7 +15,7 @@ const SignInPage = () => {
             <div className="w-full flex flex-col gap-3 items-center">
               <Button
                 type="submit"
-                className="w-full bg-[#009A6E] text-white"
+                className="w-full bg-[#009A6E] text-white hover:bg-[#007f5f]"
               >
                 Submit
               </Button>
@@ -23,7 +23,7 @@ const SignInPage = () => {
                 Don’t have an account?{' '}
                 <Link
                   href="/auth/sign-up"
-                  className="font-bold"
+                  className="font-bold hover:underline hover:text-[#009A6E]"
                 >
                   Create one
                 </Link>
