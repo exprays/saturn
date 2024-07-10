@@ -4,28 +4,28 @@ import { Card } from '../ui/card'
 import { Headphones, Star, Trash } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
-type Props = {}
-
-const InfoBar = (props: Props) => {
+const InfoBar = () => {
   return (
-    <div className="flex w-full justify-between items-center py-1 mb-8 ">
+    <div className="flex w-full justify-between items-center py-3 mb-8 px-6">
       <BreadCrumb />
-      <div className="flex gap-3 items-center">
-        <div>
-          <Card className="rounded-xl flex gap-3 py-3 px-4 text-ghost">
-            <Trash />
-            <Star></Star>
-          </Card>
-        </div>
-        <Avatar>
-          <AvatarFallback className="bg-orange text-white">
-            <Headphones />
+      <div className="flex gap-4 items-center mr-6">
+        <Card className="rounded-full flex gap-3 p-2 text-ghost">
+          <button className="p-1 hover:bg-gray-100 rounded-full">
+            <Trash size={20} />
+          </button>
+          <button className="p-1 hover:bg-gray-100 rounded-full">
+            <Star size={20} />
+          </button>
+        </Card>
+        <Avatar className="cursor-pointer">
+          <AvatarFallback className="bg-[#009A6E] text-white">
+            <Headphones size={20} />
           </AvatarFallback>
         </Avatar>
-        <Avatar>
+        <Avatar className="cursor-pointer">
           <AvatarImage
             src="https://github.com/shadcn.png"
-            alt="@shadcn"
+            alt="User avatar"
           />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
