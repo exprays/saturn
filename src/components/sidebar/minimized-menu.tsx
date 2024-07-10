@@ -33,7 +33,7 @@ export const MinMenu = ({
         <MenuLogo onClick={onShrink} />
       </span>
       <div className="animate-fade-in opacity-0 delay-300 fill-mode-forwards flex flex-col justify-between h-full pt-10">
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-white">
           {SIDE_BAR_MENU.map((menu, key) => (
             <MenuItem
               size="min"
