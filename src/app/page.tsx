@@ -16,6 +16,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import parse from 'html-react-parser'
 import { getMonthName } from '@/lib/utils'
+import { ContainerScroll } from '@/components/animations/container-scroll'
 
 export default async function Home() {
   const posts:
@@ -37,7 +38,7 @@ export default async function Home() {
             An AI powered sales assistant chatbot
           </span>
           <Image
-            src="/images/corinna-ai-logo.png"
+            src="/images/saturn-wordmark.png"
             width={500}
             height={100}
             alt="Logo"
@@ -50,13 +51,17 @@ export default async function Home() {
           <Button className="bg-orange font-bold text-white px-4">
             Start For Free
           </Button>
-          <Image
-            src="/images/iphonecorinna.png"
-            width={400}
-            height={100}
-            alt="Logo"
-            className="max-w-lg object-contain"
-          />
+
+          <ContainerScroll>
+              <Image
+              src="/images/app-ui.png"
+              alt="hero"
+              height={720}
+              width={1400}
+              className="mx-auto rounded-2xl object-cover h-full object-left-top"
+              draggable={false}
+            />
+          </ContainerScroll>
         </div>
       </section>
       <section className="flex justify-center items-center flex-col gap-4 mt-10">
