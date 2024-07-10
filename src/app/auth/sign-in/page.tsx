@@ -15,7 +15,7 @@ const SignInPage = () => {
             <div className="w-full flex flex-col gap-3 items-center">
               <Button
                 type="submit"
-                className="w-full"
+                className="w-full bg-[#009A6E] text-white"
               >
                 Submit
               </Button>

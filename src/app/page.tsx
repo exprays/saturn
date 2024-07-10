@@ -33,8 +33,8 @@ export default async function Home() {
     <main>
       <NavBar />
       <section>
-        <div className="flex items-center justify-center flex-col mt-[80px] gap-4 ">
-          <span className="text-orange bg-orange/20 px-4 py-2 rounded-full text-sm">
+        <div className="flex items-center justify-center flex-col mt-[80px] pt-4">
+          <span className="text-[#009A6E] bg-[#B3EDA9]/40 px-4 py-2 rounded-full text-sm">
             An AI powered sales assistant chatbot
           </span>
           <Image
@@ -42,15 +42,17 @@ export default async function Home() {
             width={500}
             height={100}
             alt="Logo"
-            className="max-w-lg object-contain"
+            className="max-w-lg object-contain pt-4"
           />
-          <p className="text-center max-w-[500px]">
+          <p className="text-center max-w-[500px] text-[#767F7D] dark:text-white pt-4">
             Your AI powered sales assistant! Embed Corinna AI into any website
             with just a snippet of code!
           </p>
-          <Button className="bg-orange font-bold text-white px-4">
-            Start For Free
-          </Button>
+          <div className='pt-4'>
+            <Button className="bg-[#009A6E] hover:bg-[#EBFADB] font-bold text-white hover:text-[#293E33] px-4 mb-4">
+              Start For Free
+            </Button>
+          </div>
 
           <ContainerScroll>
               <Image
@@ -68,7 +70,7 @@ export default async function Home() {
         <h2 className="text-4xl text-center"> Choose what fits you right</h2>
         <p className="text-muted-foreground text-center max-w-lg">
           Our straightforward pricing plans are tailored to meet your needs. If
-          {" you're"} not ready to commit you can get started for free.
+          you&apos;re not ready to commit you can get started for free.
         </p>
       </section>
       <div className="flex  justify-center gap-4 flex-wrap mt-6">
@@ -105,7 +107,7 @@ export default async function Home() {
               </div>
               <Link
                 href={`/dashbord?plan=${card.title}`}
-                className="bg-[#f3d299] border-orange border-2 p-2 w-full text-center font-bold rounded-md"
+                className="bg-[#009A6E] border-green border-2 p-2 w-full text-center font-bold rounded-md text-white hover:bg-[#EBFADB] hover:text-[#293E33]"
               >
                 Get Started
               </Link>
