@@ -59,7 +59,7 @@ const DomainMenu = ({ domains, min }: Props) => {
               />
               <Button
                 type="submit"
-                className="w-full"
+                className="w-full bg-[#009A6E] text-white"
               >
                 Add Domain
               </Button>

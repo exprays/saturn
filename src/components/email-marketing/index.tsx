@@ -57,7 +57,7 @@ const EmailMarketing = ({ campaign, domains, subscription }: Props) => {
   } = useEmailMarketing()
 
   return (
-    <div className="w-full flex-1 h-0 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="w-full flex-1 h-0 grid grid-cols-1 lg:grid-cols-2 gap-10 pr-4">
       <CustomerTable
         domains={domains}
         onId={onSetAnswersId}
@@ -70,6 +70,7 @@ const EmailMarketing = ({ campaign, domains, subscription }: Props) => {
           <Button
             disabled={isSelected.length == 0}
             onClick={onAddCustomersToCampaign}
+            className='bg-[#009A6E] text-white'
           >
             <Plus /> Add to campaign
           </Button>

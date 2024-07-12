@@ -76,7 +76,7 @@ const Page = async (props: Props) => {
               </Card>
             ))
           ) : (
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center items-center p-2">
               <p>No Appointments For Today</p>
             </div>
           )}
