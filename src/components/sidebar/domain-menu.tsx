@@ -82,8 +82,8 @@ const DomainMenu = ({ domains, min }: Props) => {
               <Image
                 src={`https://ucarecdn.com/${domain.icon}/`}
                 alt="logo"
-                width={20}
-                height={20}
+                width={28}
+                height={28}
               />
               {!min && <p className="text-sm">{domain.name}</p>}
             </Link>
