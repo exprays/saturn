@@ -45,7 +45,7 @@ export default async function Home() {
             className="max-w-lg object-contain pt-4"
           />
           <p className="text-center max-w-[500px] text-[#767F7D] dark:text-white pt-4">
-            Your AI powered sales assistant! Embed Corinna AI into any website
+            Your AI powered sales assistant! Embed Saturn AI into any website
             with just a snippet of code!
           </p>
           <div className='pt-4'>

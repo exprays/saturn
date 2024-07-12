@@ -38,7 +38,7 @@ const Layout = async ({ children }: Props) => {
           alt="app image"
           loading="lazy"
           sizes="30"
-          className="absolute shrink-0 !w-[1600px] top-48"
+          className="absolute shrink-0 !w-[1600px] top-48 rounded-lg"
           width={0}
           height={0}
         />
