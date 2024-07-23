@@ -18,8 +18,8 @@ const BreadCrumb = (props: Props) => {
     realtime,
   } = useSideBar()
   return (
-    <div className="flex flex-col ">
-      <div className="flex gap-5 items-center">
+    <div className="flex flex-col">
+      <div className="flex gap-5 items-start">
         <h2 className="text-3xl font-bold capitalize">{page}</h2>
         {page === 'conversation' && chatRoom && (
           <Loader

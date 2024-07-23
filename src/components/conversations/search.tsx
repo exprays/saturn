@@ -1,5 +1,6 @@
 import React from 'react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
 
 type Props = {
   register: UseFormRegister<FieldValues>
@@ -15,27 +16,46 @@ type Props = {
 const ConversationSearch = ({ register, domains }: Props) => {
   return (
     <div className="flex flex-col py-3">
-      <select
-        {...register('domain')}
-        className="px-3 py-4 text-sm border-[1px] rounded-lg mr-5"
-      >
-        <option
-          disabled
-          selected
-        >
-          Domain name
-        </option>
-        {domains?.map((domain) => (
-          <option
+      <Select>
+      <SelectTrigger {...register('domain')}
+        className="px-3 py-4 text-sm border-[1px] rounded-lg mr-5">
+          <SelectValue placeholder="Domain Name"/>
+      </SelectTrigger>
+      <SelectContent>
+      {domains?.map((domain) => (
+          <SelectItem
             value={domain.id}
             key={domain.id}
+            className='cursor-pointer'
           >
             {domain.name}
-          </option>
+          </SelectItem>
         ))}
-      </select>
+      </SelectContent>
+    </Select>
     </div>
   )
 }
 
 export default ConversationSearch
+
+// const conv = () => {
+//   return (
+//     <Select>
+//       <SelectTrigger {...register('domain')}
+//         className="px-3 py-4 text-sm border-[1px] rounded-lg mr-5">
+//           <SelectValue placeholder="Domain Name"/>
+//       </SelectTrigger>
+//       <SelectContent>
+//       {domains?.map((domain) => (
+//           <SelectItem
+//             value={domain.id}
+//             key={domain.id}
+//           >
+//             {domain.name}
+//           </SelectItem>
+//         ))}
+//       </SelectContent>
+//     </Select>
+//   )
+// }
