@@ -1,16 +1,16 @@
 import { onGetSubscriptionPlan } from '@/actions/settings'
 import React from 'react'
 import Section from '../section-label'
-import { Card, CardContent, CardDescription } from '../ui/card'
-import { Check, CheckCircle2, Plus } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import { CheckCircle2, Plus, Wifi } from 'lucide-react'
 import { pricingCards } from '@/constants/landing-page'
 import Modal from '../mondal'
 import SubscriptionForm from '../forms/settings/subscription-form'
-import Image from 'next/image'
+import { getUserTransactions } from '@/actions/dashboard'
 
 type Props = {}
 
-const BillingSettings = async (props: Props) => {
+const BillingSettings: React.FC<Props> = async (props: Props) => {
   const plan = await onGetSubscriptionPlan()
   const planFeatures = pricingCards.find(
     (card) => card.title.toUpperCase() === plan?.toUpperCase()
@@ -29,7 +29,7 @@ const BillingSettings = async (props: Props) => {
       <div className="lg:col-span-2 flex justify-start lg:justify-center ">
         <Modal
           title="Choose A Plan"
-          description="Tell us about yourself! What do you do? Let’s tailor your experience so it best suits you."
+          description="Tell us about yourself! What do you do? Let&apos;s tailor your experience so it best suits you."
           trigger={
             plan && plan === 'STANDARD' ? (
               <Card className="border-dashed bg-cream border-gray-400 w-full cursor-pointer h-[270px] flex justify-center items-center">
@@ -43,12 +43,15 @@ const BillingSettings = async (props: Props) => {
                 </CardContent>
               </Card>
             ) : (
-              <Image
-                src="/images/creditcard.png"
-                width={400}
-                height={400}
-                alt="image"
-              />
+              <Card className='bg-gradient-to-tr from-clovers via-mintspring to-clovers w-full h-[270px] rounded-xl cursor-pointer mr-4'>
+                  <CardHeader className='flex flex-row items-center justify-between'>
+                    <CardTitle className='text-white'>{plan}</CardTitle>
+                    <Wifi className='text-white' />
+                  </CardHeader>
+                  <CardContent className='items-start justify-end'>
+                    <h3 className='text-white'>**** **** **** 4444</h3>
+                  </CardContent>
+              </Card>
             )
           }
         >
