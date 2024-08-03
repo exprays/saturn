@@ -23,7 +23,7 @@ export const PaymentForm = ({ plan }: PaymentFormProps) => {
         <CardDescription>Enter your card details</CardDescription>
       </div>
       <PaymentElement />
-      <Button type="submit">
+      <Button type="submit" className='bg-aquamarine'>
         <Loader loading={processing}>Pay</Loader>
       </Button>
     </form>
