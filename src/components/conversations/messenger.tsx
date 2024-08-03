@@ -45,7 +45,7 @@ const Messenger = (props: Props) => {
       </div>
       <form
         onSubmit={onHandleSentMessage}
-        className="flex px-3 pt-3 pb-10 flex-col backdrop-blur-sm bg-muted w-full"
+        className="flex px-4 pt-3 pb-10 flex-col backdrop-blur-sm bg-muted w-full overflow-hidden rounded-xl mb-2 mr-2"
       >
         <div className="flex justify-between">
           <Input
@@ -55,7 +55,7 @@ const Messenger = (props: Props) => {
           />
           <Button
             type="submit"
-            className="mt-3 px-7"
+            className="mt-3 px-7 bg-mayanjade text-white"
             disabled={!chatRoom}
           >
             Send

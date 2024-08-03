@@ -1,6 +1,7 @@
 import React from 'react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
+import Image from 'next/image'
 
 type Props = {
   register: UseFormRegister<FieldValues>
@@ -28,7 +29,16 @@ const ConversationSearch = ({ register, domains }: Props) => {
             key={domain.id}
             className='cursor-pointer'
           >
-            {domain.name}
+            <div className='flex flex-row items-center justify-center p-2 space-x-4'>
+
+            <Image
+              src={`https://ucarecdn.com/${domain.icon}/`}
+              alt={domain.name}
+              width={20}
+              height={20}
+              />
+            <p className='text-sm font-semibold text-timelessgray'>{domain.name}</p>
+              </div>
           </SelectItem>
         ))}
       </SelectContent>
