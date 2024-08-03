@@ -14,7 +14,7 @@ import { Separator } from '@/components/ui/separator'
 import CalIcon from '@/icons/cal-icon'
 import PersonIcon from '@/icons/person-icon'
 import { TransactionsIcon } from '@/icons/transactions-icon'
-import { DollarSign } from 'lucide-react'
+import { CreditCard, DollarSign } from 'lucide-react'
 
 const Page = async () => {
   const clients = await getUserClients()
@@ -50,7 +50,7 @@ const Page = async () => {
               value={sales || 0}
               sales
               title="Total Sales"
-              icon={<DollarSign />}
+              icon={<CreditCard />}
             />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

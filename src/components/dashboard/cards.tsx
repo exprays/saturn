@@ -1,25 +1,28 @@
-import React from 'react'
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 type Props = {
-  title: string
-  value: number
-  icon: JSX.Element
-  sales?: boolean
-}
+  title: string;
+  value: number;
+  icon: JSX.Element;
+  sales?: boolean;
+};
 
 const DashboardCard = ({ icon, title, value, sales }: Props) => {
   return (
-    <div className="rounded-lg flex flex-col gap-3 p-6 border border-border bg-cream dark:bg-muted w-full h-full">
-      <div className="flex items-center gap-3">
-        <div className="text-primary">{icon}</div>
-        <h2 className="font-bold text-lg">{title}</h2>
-      </div>
-      <p className="font-bold text-3xl mt-auto">
-        {sales && '$'}
-        {value.toLocaleString()}
-      </p>
-    </div>
-  )
-}
+    <Card x-chunk="dashboard-01-chunk-0">
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-lg font-medium">{title}</CardTitle>
+        {icon}
+      </CardHeader>
+      <CardContent>
+        <div className="text-2xl font-bold">{sales && "$"}{value.toLocaleString()}</div>
+        <p className="text-xs text-mintspring">
+          +91% 
+        </p>
+      </CardContent>
+    </Card>
+  );
+};
 
-export default DashboardCard
+export default DashboardCard;
