@@ -22,8 +22,31 @@ type Props = {
 }
 
 const ProductTable = ({ id, products }: Props) => {
+
+  const EmptyState = () => (
+    <div className="flex flex-col items-center justify-center p-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+        <line x1="12" y1="8" x2="12" y2="16" />
+        <line x1="8" y1="12" x2="16" y2="12" />
+      </svg>
+      <p className="mt-4 text-lg font-semibold">No products yet</p>
+      <p className="text-sm text-timelessgray">Add your first product to get started</p>
+    </div>
+  )
+
   return (
-    <div>
+    <div className='space-y-2'>
       <div>
         <h2 className="font-bold text-2xl">Products</h2>
         <p className="text-sm font-light">
@@ -51,9 +74,9 @@ const ProductTable = ({ id, products }: Props) => {
                 <>
                   <Plus
                     size={20}
-                    className="text-white"
+                    className="text-aquamarine"
                   />
-                  <p className="text-white">Add Product</p>
+                  <p className="text-aquamarine">Add Product</p>
                 </>
               }
             >
@@ -63,6 +86,9 @@ const ProductTable = ({ id, products }: Props) => {
         }
       >
         <TabsContent value="All products">
+            {products.length === 0 ? (
+                <EmptyState />
+            ) : (
           <DataTable headers={['Featured Image', 'Name', 'Pricing', 'Created']}>
             {products.map((product) => (
               <TableRow key={product.id}>
@@ -84,6 +110,7 @@ const ProductTable = ({ id, products }: Props) => {
               </TableRow>
             ))}
           </DataTable>
+            )}
         </TabsContent>
       </TabsMenu>
     </div>

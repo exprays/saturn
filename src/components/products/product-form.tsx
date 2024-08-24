@@ -68,7 +68,7 @@ export const CreateProductForm = ({ id }: CreateProductFormProps) => {
       />
       <Button
         type="submit"
-        className="w-full"
+        className="w-full bg-mayanjade text-white"
       >
         <Loader loading={loading}>Create Product</Loader>
       </Button>
